@@ -1,4 +1,5 @@
-const socket = new WebSocket('ws://localhost:8080');
+const socket = new WebSocket('wss://webgroupchat-server-jacker-bp71.onrender.com', "HTTPS");
+
 
 const showMessage = (str, isMine = false) => {
     document.getElementById('messages').innerHTML += `
