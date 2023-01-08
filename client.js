@@ -11,6 +11,7 @@ const showMessage = (str, isMine = false) => {
 
 socket.addEventListener('message', e => {
     e.data.text().then(showMessage)
+    window.scrollBy(0, 100);
 });
 
 const input = document.querySelector('input');

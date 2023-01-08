@@ -10,13 +10,17 @@ body {
     font-family: 'Roboto', sans-serif;
 }
 
+#messages {
+    /* position: fixed; */
+}
+
 form {
     position: fixed;
     bottom: 0;
     left: 0;
     right: 0;
     padding: 20px;
-    background-color: #242526;
+    /* background-color: #242526; */
 }
 
 input { 
