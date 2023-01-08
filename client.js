@@ -11,7 +11,7 @@ const showMessage = (str, isMine = false) => {
 
 socket.addEventListener('message', e => {
     e.data.text().then(showMessage)
-    window.scrollBy(0, 100);
+    window.scrollBy(0, 1000);
 });
 
 const input = document.querySelector('input');
@@ -22,7 +22,7 @@ document.querySelector('form').onsubmit = e => {
         socket.send(input.value);
         showMessage(input.value, true);
         input.value = "";
-        window.scrollBy(0, 100);
+        window.scrollBy(0, 1000);
     }
 
 }

@@ -12,6 +12,9 @@ body {
 
 #messages {
     /* position: fixed; */
+    /* margin-bottom: 200px; */
+    height: 85vh;
+    overflow-y: scroll;
 }
 
 form {
@@ -20,7 +23,9 @@ form {
     left: 0;
     right: 0;
     padding: 20px;
-    /* background-color: #242526; */
+    background-image: url("https://cdn.wallpapersafari.com/87/66/I6oYmv.jpg");
+    background-size: cover;
+    background-position: center;
 }
 
 input { 
