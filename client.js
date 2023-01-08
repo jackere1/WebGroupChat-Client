@@ -1,8 +1,9 @@
 const socket = new WebSocket('wss://webgroupchat-server-jacker-bp71.onrender.com', "HTTPS");
 
+const messages = document.getElementById('messages');
 
 const showMessage = (str, isMine = false) => {
-    document.getElementById('messages').innerHTML += `
+    messages.innerHTML += `
         <div class="messageContainer ${isMine ? 'mine' : 'notMine'}">
             <div class="messageCloud">${str}</div>
         </div>
@@ -11,7 +12,7 @@ const showMessage = (str, isMine = false) => {
 
 socket.addEventListener('message', e => {
     e.data.text().then(showMessage)
-    window.scrollBy(0, 1000);
+    messages.scrollBy(0, 100);
 });
 
 const input = document.querySelector('input');
@@ -22,7 +23,7 @@ document.querySelector('form').onsubmit = e => {
         socket.send(input.value);
         showMessage(input.value, true);
         input.value = "";
-        window.scrollBy(0, 1000);
+        messages.scrollBy(0, 100);
     }
 
 }
