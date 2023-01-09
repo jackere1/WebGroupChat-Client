@@ -1,0 +1,27 @@
+body {
+    background-color: #242526;
+    background-image: url('../assets/images/bg.jpg');
+    background-size: cover;
+    /* background-position: 50% 100%; */
+    background-repeat: no-repeat;
+    color: #f1f1f1;
+    font-family: 'Roboto', sans-serif;
+}
+
+form {
+    position: absolute;
+    top: 50%;
+    left: 0;
+    right: 0;   
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+    gap: 5px;
+}
+
+input {
+    border-radius: 20px;
+    padding: 5px 10px;
+    background-color: transparent;
+    color: #fff;
+}

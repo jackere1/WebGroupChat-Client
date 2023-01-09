@@ -18,19 +18,19 @@ body {
     padding: 0 2vw;
 }
 
-::-webkit-scrollbar {
+#messages::-webkit-scrollbar {
     width: 0.5vw;
 }
 
-::-webkit-scrollbar-track {
+#messages::-webkit-scrollbar-track {
     background: #242526; 
 }
 
-::-webkit-scrollbar-thumb {
+#messages::-webkit-scrollbar-thumb {
     background: #888; 
 }
 
-::-webkit-scrollbar-thumb:hover {
+#messages::-webkit-scrollbar-thumb:hover {
     background: #555; 
 }
 
