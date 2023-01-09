@@ -65,18 +65,24 @@ input {
 
 .messageContainer {
     display: flex;
+    flex-flow: column;
     margin: 10px 0;
 }
 
+.messageContainer > span {
+    color: #a4a4a4;
+    font-size: 0.8em;
+}
+
 .mine {
-    justify-content: flex-end;
+    align-items: flex-end;
 }
 .mine .messageCloud {
     background-color: #07c;
 }
 
 .notMine {
-    justify-content: flex-start;
+    align-items: flex-start;
 }
 
 
