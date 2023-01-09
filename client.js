@@ -1,6 +1,8 @@
 const socket = new WebSocket('wss://webgroupchat-server-jacker-bp71.onrender.com', "HTTPS");
 
 let username;
+let lastUser;
+
 function enter(e) {
     e.preventDefault();
     
@@ -27,7 +29,6 @@ function msg(e) {
     if (document.getElementById('text').value) {
         const data = {username: username};
         data.message = document.getElementById('text').value;
-        console.log(data);
         
         socket.send(JSON.stringify(data));
         showMessage(document.getElementById('text').value, true);
@@ -35,7 +36,6 @@ function msg(e) {
         document.getElementById('text').value = "";
         document.getElementById('messages').scrollBy(0, 6000);
     }
-    console.log(username)
 }
 
 socket.addEventListener('message', e => {
@@ -46,11 +46,14 @@ socket.addEventListener('message', e => {
 });
 
 const showMessage = (str, isMine = false, user = 'You') => {
+
     document.getElementById('messages').innerHTML += `
         <div class="messageContainer ${isMine ? 'mine' : 'notMine'}">
-            <span>${user}</span>
+            ${lastUser === user ? '' : `<span>${user}</span>`}
             <div class="messageCloud">${str}</div>
         </div>
     `
+
+    lastUser = user;
 }
 
