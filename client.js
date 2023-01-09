@@ -30,7 +30,6 @@ function msg(e) {
         console.log(data);
         
         socket.send(JSON.stringify(data));
-        // socket.send(document.getElementById('text').value);
         showMessage(document.getElementById('text').value, true);
 
         document.getElementById('text').value = "";
