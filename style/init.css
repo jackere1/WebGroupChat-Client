@@ -8,6 +8,12 @@ body {
     font-family: 'Roboto', sans-serif;
 }
 
+@media only screen and (max-width: 600px) {
+    body {
+        background-image: url('https://c4.wallpaperflare.com/wallpaper/553/564/19/cyberpunk-amoled-dark-vertical-hd-wallpaper-preview.jpg');
+    }
+}
+
 form {
     position: absolute;
     top: 50%;
