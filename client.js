@@ -15,7 +15,7 @@ function enter(e) {
         document.body.innerHTML += `
         <div id="messages"></div>
         <form onsubmit="msg(event); return false;">
-        <input type="text" placeholder="Aa" maxlength="100" id="text" autocomplete="off" >
+        <input type="text" placeholder="Aa" maxlength="1000" id="text" autocomplete="off" >
         </form> 
         `
     }
